@@ -1,6 +1,9 @@
-import { IsNumber, IsString } from "class-validator";
+import { IsNumber, IsOptional, IsString } from "class-validator";
 
 export class CreateProductDto {
+  @IsNumber()
+  categoryId: number;
+
   @IsString()
   name: string;
 
@@ -10,6 +13,23 @@ export class CreateProductDto {
   @IsString()
   image: string;
 
+  @IsOptional()
   @IsNumber()
-  categoryId: number;
+  weight?: number;
+
+  @IsOptional()
+  @IsNumber()
+  length?: number;
+
+  @IsOptional()
+  @IsNumber()
+  height?: number;
+
+  @IsOptional()
+  @IsNumber()
+  width?: number;
+
+  @IsOptional()
+  @IsNumber()
+  diameter?: number;
 }

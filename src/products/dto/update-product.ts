@@ -12,4 +12,19 @@ export class UpdateProductDTO {
 
   @IsString()
   image: string;
+
+  @IsNumber()
+  weight?: number;
+
+  @IsNumber()
+  length?: number;
+
+  @IsNumber()
+  height?: number;
+
+  @IsNumber()
+  width?: number;
+
+  @IsNumber()
+  diameter?: number;
 }

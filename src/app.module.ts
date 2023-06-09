@@ -13,6 +13,11 @@ import { CategoriesModule } from './categories/categories.module';
 import { ProductsModule } from './products/products.module';
 import { CartsModule } from './carts/carts.module';
 import { CartProductsModule } from './cart-products/cart-products.module';
+import { PaymentStatusModule } from './payment-status/payment-status.module';
+import { PaymentsModule } from './payments/payments.module';
+import { OrdersModule } from './orders/orders.module';
+import { OrderProductsModule } from './order-products/order-products.module';
+import { CorreiosModule } from './correios/correios.module';
 
 @Module({
   imports: [
@@ -40,6 +45,11 @@ import { CartProductsModule } from './cart-products/cart-products.module';
     ProductsModule,
     CartsModule,
     CartProductsModule,
+    PaymentStatusModule,
+    PaymentsModule,
+    OrdersModule,
+    OrderProductsModule,
+    CorreiosModule,
   ],
   controllers: [],
   providers: [{

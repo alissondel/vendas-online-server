@@ -1,3 +1,4 @@
+import { OrderEntity } from '../../orders/entities/order.entity';
 import { CityEntity } from '../../cities/entities/city.entity';
 import { UsersEntity } from '../../users/entities/users.entity';
 
@@ -6,6 +7,7 @@ import {
   PrimaryGeneratedColumn, 
   Column, CreateDateColumn, 
   ManyToOne, 
+  OneToMany,
   JoinColumn 
 } from 'typeorm'
 
@@ -42,4 +44,7 @@ export class AddressEntity {
   @ManyToOne(() => CityEntity, (city) => city.addresses)
   @JoinColumn({ name: 'city_id', referencedColumnName: 'id' })
   city?: CityEntity;
+
+  @OneToMany(() => OrderEntity, (order) => order.address)
+  orders?: OrderEntity[];
 }
